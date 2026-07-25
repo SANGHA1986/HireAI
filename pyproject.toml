@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hireai"
+version = "1.0.0"
+description = "Budget-Native Swarm OS: A pure asynchronous AI orchestration engine designed for cost control."
+authors = [{ name = "SANGHA1986", email = "admin@hireai.com" }]
+requires-python = ">=3.9"
+dependencies = [
+    "httpx>=0.24.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/SANGHA1986/HireAI"

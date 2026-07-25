@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: hireai
+Version: 1.0.0
+Summary: Budget-Native Swarm OS: A pure asynchronous AI orchestration engine designed for cost control.
+Author-email: SANGHA1986 <admin@hireai.com>
+Project-URL: Homepage, https://github.com/SANGHA1986/HireAI
+Requires-Python: >=3.9
+License-File: LICENSE.md
+Requires-Dist: httpx>=0.24.0
+Dynamic: license-file
