@@ -1,6 +1,8 @@
 LICENSE.md
 pyproject.toml
 hireai/__init__.py
+hireai/budget.py
+hireai/harness.py
 hireai.egg-info/PKG-INFO
 hireai.egg-info/SOURCES.txt
 hireai.egg-info/dependency_links.txt
