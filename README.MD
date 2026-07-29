@@ -1,64 +1,109 @@
-# HireAI: Budget-Native Swarm OS 🚀
+# HireAI
 
-*(English below / 한국어 설명은 아래에 있습니다)*
+HireAI prevents AI agents from burning your API budget.  
+Most AI agent frameworks optimize for autonomy. HireAI optimizes for survival.  
+Your agents can think freely. They cannot spend freely.
+
+**Positioning:** The Financial Operating System for AI Agents  
+(**Budget-Native AI Agent Operating System**)
 
 ---
 
 ## 🇺🇸 English
 
-HireAI is not just another agent orchestrator. It is a **"Budget-Native Swarm OS"** where cost protection is the highest priority. Existing frameworks like Langchain, CrewAI, and AutoGen are not competitors; they operate as **'SubAgent adapters (subordinate workers)'** strictly under our CostTracker's budget control.
+### Problem
+You wake up and your agent has spent your monthly API budget overnight.
+Traditional orchestration frameworks help agents do more work, but they do not
+treat cost control as a first-class safety boundary.
 
-### ✨ Key Features
-1. **Top-level CEO Orchestration**: Evaluates the overall situation and delegates tasks to sub-agents.
-2. **Real-time CostTracker**: Operates as a 1st-class citizen, ensuring not a single cent of budget overrun is allowed.
-3. **Dynamic Pause (Freeze)**: Instantly and safely freezes all sub-agent API calls the moment the budget limit (Hard Cap) is reached.
-4. **Resume Engine**: When the admin approves additional budget in the dashboard, operations seamlessly resume exactly where they stopped to complete the mission.
+### Solution
+HireAI freezes spending before damage spreads.
 
-### 📦 Installation
+- At your hard cap (for example, $50), API execution pauses automatically.
+- The system waits for admin approval.
+- Work resumes from where it stopped after approval.
+
+### 3-Second Flow
+
+```text
+[ AI Agent Task Running ]
+          |
+          v
+[ API Cost Reaches $50 ] --(over cap)--> [ Dynamic Pause: Auto Freeze ]
+                                                     |
+                                                     v
+[ Task Completed ] <--------(resume)-------- [ Admin Approval: Resume Engine ]
+```
+
+### Core Components
+1. **CostTracker**: real-time cost accounting per run
+2. **Dynamic Pause**: automatic hard-cap freeze
+3. **Resume Engine**: controlled restart from paused state
+
+### Installation
 ```bash
 git clone https://github.com/SANGHA1986/HireAI.git
 cd HireAI
 python -m venv venv
-source venv/bin/activate # or venv\Scripts\activate on Windows
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -e .
 ```
 
-### 🚀 Quick Start (Test Pause/Resume)
-See the core functionality in action without needing a real API key:
+### Quick Start
 ```bash
 python test_os.py
 ```
 
-### 📜 License
-This project is licensed under **BUSL 1.1**. It is 100% free for personal, non-commercial, academic use, and for small businesses with an annual revenue under 300 million KRW. However, commercial SaaS services or enterprise adoption (revenue >= 300 million KRW) strictly require a paid commercial license. See `LICENSE.md` for details.
+### License
+This project is licensed under **BUSL 1.1**.
+See `LICENSE.md` for commercial usage terms.
 
 ---
 
-## 🇰🇷 한국어 (Korean)
+## 🇰🇷 한국어
 
-HireAI는 단순한 에이전트 오케스트레이터가 아닙니다. **"돈을 먼저 지키는 AI 회사 엔진(Budget-Native Swarm OS)"**입니다.
-Langchain, CrewAI, AutoGen과 같은 기존 프레임워크들은 우리가 경쟁할 대상이 아니라, 철저히 예산 통제(CostTracker) 아래에서 움직이는 **'SubAgent 어댑터(하청 워커)'**로 작동합니다.
+### 문제
+자고 일어났더니 에이전트가 API 비용을 한꺼번에 소진하는 상황이 자주 발생합니다.
+기존 에이전트 프레임워크는 "더 많은 작업"에는 강하지만, "비용 생존성"은 약합니다.
 
-### ✨ 핵심 기능
-1. **최상위 CEO 오케스트레이션**: 전체 상황을 판단하여 하청 에이전트들에게 작업을 위임합니다.
-2. **실시간 비용 추적기 (CostTracker)**: 1급 기능으로 작동하며 1원의 예산 초과도 허용하지 않습니다.
-3. **동적 동결 (Dynamic Pause)**: 설정된 예산 한도(Hard Cap)에 도달하는 즉시 모든 하청 에이전트들의 API 호출을 안전하게 얼려버립니다.
-4. **재개 엔진 (Resume Engine)**: 관리자 대시보드에서 추가 예산을 승인하면, 정확히 멈춘 시점부터 다시 풀려서 작업을 끝까지 완수합니다.
+### 해결
+HireAI는 비용 폭탄이 발생하기 전에 자동으로 동결합니다.
 
-### 📦 설치 방법
+- 설정한 하드캡(예: $50)에 도달하면 즉시 자동 일시정지
+- 관리자 승인 전까지 추가 비용 발생 차단
+- 승인 후 멈춘 지점부터 작업 재개
+
+### 3초 이해 흐름도
+
+```text
+[ AI 에이전트 작업 실행 ]
+          |
+          v
+[ API 비용 $50 도달 ] --(비용 초과)--> [ Dynamic Pause: 자동 일시정지 ]
+                                                     |
+                                                     v
+[ 작업 완료 ] <--------(작업 재개)-------- [ 관리자 승인: Resume Engine ]
+```
+
+### 핵심 구성 요소
+1. **CostTracker**: 실행 단위 실시간 비용 집계
+2. **Dynamic Pause**: 하드캡 초과 시 자동 동결
+3. **Resume Engine**: 승인 후 안전 재개
+
+### 설치 방법
 ```bash
 git clone https://github.com/SANGHA1986/HireAI.git
 cd HireAI
 python -m venv venv
-source venv/bin/activate # Windows의 경우 venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -e .
 ```
 
-### 🚀 빠른 시작 (동결/재개 테스트)
-API 키 없이 시뮬레이션으로 동결/재개 흐름을 바로 테스트해 볼 수 있습니다:
+### 빠른 시작
 ```bash
 python test_os.py
 ```
 
-### 📜 라이선스 안내
-본 프로젝트는 **BUSL 1.1** 라이선스를 따릅니다. 개인 연구, 비상업적 이용, 연 매출 3억 원 이하의 개인 및 영세 기업은 100% 무료로 사용할 수 있습니다. 단, 이를 활용한 상업적 SaaS 서비스 제공이나 연 매출 3억 원 이상의 대기업 무단 도입은 엄격히 금지되며, 별도의 유료 상업 라이선스가 필요합니다. 자세한 내용은 `LICENSE.md`를 참고하세요.
+### 라이선스 안내
+본 프로젝트는 **BUSL 1.1** 라이선스를 따릅니다.
+상업적 이용 조건은 `LICENSE.md`를 확인하세요.
