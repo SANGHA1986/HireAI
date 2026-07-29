@@ -51,7 +51,22 @@ pip install -e .
 
 ### Quick Start
 ```bash
-python test_os.py
+python test_budget_harness.py
+```
+
+### Evidence (Demo)
+This is a reproducible local demo result (not a customer case study).
+
+```text
+$ python test_budget_harness.py
+PASS: harness result -> Mock result for: Summarize sales data
+PASS: total cost -> 0.001075
+PASS: hired agents -> ['sub_agent_1']
+
+$ BudgetGuard hard_cap=1.0
+cost 0.5 running True
+cost 1.1 frozen True
+resumed True
 ```
 
 ### License
@@ -101,7 +116,22 @@ pip install -e .
 
 ### 빠른 시작
 ```bash
-python test_os.py
+python test_budget_harness.py
+```
+
+### Evidence (데모)
+아래는 실제 고객 사례가 아니라, 로컬에서 재현 가능한 데모 결과입니다.
+
+```text
+$ python test_budget_harness.py
+PASS: harness result -> Mock result for: Summarize sales data
+PASS: total cost -> 0.001075
+PASS: hired agents -> ['sub_agent_1']
+
+$ BudgetGuard hard_cap=1.0
+cost 0.5 running True
+cost 1.1 frozen True
+resumed True
 ```
 
 ### 라이선스 안내
